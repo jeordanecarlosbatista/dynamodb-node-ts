@@ -1,0 +1,87 @@
+[
+    {
+       "partition_key": "CUSTOMER#YEAR_BIRTH#1999#1",
+       "sort_key": "USER#",
+       "id": 1,
+       "name": "Colten Friesen",
+       "year_birth": 1999
+    },
+    {
+      "partition_key": "CUSTOMER#YEAR_BIRTH#1999#2",
+      "sort_key": "USER#",
+      "id": 2,
+      "name": "Archibald Lindgren", 
+      "year_birth": 1999
+   },
+   {
+      "partition_key": "CUSTOMER#YEAR_BIRTH#2000#3",
+      "sort_key": "USER#",
+      "id": 3,
+      "name": "Dr. Justina Huel I",
+      "year_birth": 2000
+   },
+   {
+      "partition_key": "CART#1",
+      "sort_key": "CUSTOMER#1",
+      "id": 1,
+      "total_items": 5,
+      "amount": 199,
+      "customer": 1
+   },
+   {
+      "partition_key": "CART#2",
+      "sort_key": "CUSTOMER#3",
+      "id": 2,
+      "total_items": 10,
+      "amount": 950.1,
+      "customer": 3
+   },
+   {
+      "partition_key": "ITEM#1",
+      "sort_key": "CART#1",
+      "id": 1,
+      "cart": 1,
+      "product": 1,
+      "amount": 3
+   },
+   {
+      "partition_key": "ITEM#2",
+      "sort_key": "CART#2",
+      "id": 2,
+      "cart": 2,
+      "product": 3,
+      "amount": 5
+   },
+   {
+      "partition_key": "ITEM#3",
+      "sort_key": "CART#2",
+      "id": 3,
+      "cart": 2,
+      "product": 2,
+      "amount": 5
+   },
+   {
+      "partition_key": "PRODUCT#CATEGORY#TShirt#1",
+      "sort_key": "PRODUCT#",
+      "id": 1,
+      "name": "Custom Unisex 100%",
+      "price": 99.99,
+      "category": "TShirt"
+   },
+   {
+      "partition_key": "PRODUCT#CATEGORY#Pant#2",
+      "sort_key": "PRODUCT#",
+      "id": 2,
+      "name": "Jeans Fit Black",
+      "price": 190,
+      "category": "Pant"
+   },
+   {
+      "partition_key": "PRODUCT#CATEGORY#TShirt#3",
+      "sort_key": "PRODUCT#",
+      "id": 3,
+      "name": "Custom Female 100%",
+      "price": 249.99,
+      "category": "TShirt"
+   }
+ ]

@@ -1,0 +1,31 @@
+{
+  "name": "dynamodb-node-ts",
+  "version": "1.0.0",
+  "description": "This project is just for learning and test proposals. Do not use it in production.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "db:create-table": "./bin/setup-database-inicialize.sh",
+    "db:delete-table": "./bin/setup-database-delete.sh",
+    "db:load-table": "node ./src/db.js",
+    "up:dynamodb": "docker run -d -p 8000:8000 amazon/dynamodb-local",
+    "ci": "npm run db:setup && npm run db:load",
+    "reset": "npm run db:delete && npm run db:ci"
+  },
+  "author": "Jeordane Carlos Batista <jeordane.batista@hotmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/jest": "^29.0.3",
+    "jest": "^29.0.3",
+    "prettier": "2.7.1",
+    "serverless-localstack": "^1.0.0",
+    "ts-jest": "^29.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1220.0",
+    "dotenv": "^16.0.2"
+  }
+}
