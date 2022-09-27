@@ -93,7 +93,7 @@ Ran all test suites.
 
 ##### List tables
 ```
-docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -e AWS_SECRET_ACCESS_KEY=local amazon/aws-cli dynamodb list-tables --endpoint-url http://172.17.0.2:8000
+docker run --rm -it --network dynamodb-local -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -e AWS_SECRET_ACCESS_KEY=local amazon/aws-cli dynamodb list-tables --endpoint-url http://dynamodb-local:8000
 
 output:
 {
@@ -104,7 +104,7 @@ output:
 ```
 ##### List all items
 ```
-docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -e AWS_SECRET_ACCESS_KEY=local amazon/aws-cli dynamodb scan --table-name shopping-cart --endpoint-url http://172.17.0.2:8000
+docker run --rm -it --network dynamodb-local -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -e AWS_SECRET_ACCESS_KEY=local amazon/aws-cli dynamodb scan --table-name shopping-cart --endpoint-url http://dynamodb-local:8000
 ```
 <details >
 <summary style="font-size:14px">View output</summary>
@@ -331,7 +331,7 @@ docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -
 
 ##### Returns information about the table, including the current status of the table, when it was created, the primary key schema, and any indexes on the table.
 ```
-docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -e AWS_SECRET_ACCESS_KEY=local amazon/aws-cli dynamodb describe-table --table-name shopping-cart --endpoint-url http://172.17.0.2:8000
+docker run --rm -it --network dynamodb-local -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -e AWS_SECRET_ACCESS_KEY=local amazon/aws-cli dynamodb describe-table --table-name shopping-cart --endpoint-url http://dynamodb-local:8000
 ```
 <details >
 <summary style="font-size:14px">View output</summary>

@@ -7,7 +7,7 @@ dotenv.config()
 const tableName = process.env.TABLE_NAME
 const database = new DocumentClient({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    endpoint: process.env.ENDPOINT_DYNAMODB.replace("172.17.0.2", "localhost"),
+    endpoint: process.env.ENDPOINT_DYNAMODB,
     region: process.env.REGION,
 })
 const data = JSON.parse(

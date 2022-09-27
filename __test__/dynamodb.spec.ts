@@ -2,7 +2,7 @@ import { DocumentClient } from 'aws-sdk/clients/dynamodb'
 
 const makeSut = (): { client: DocumentClient } => {
     const database = new DocumentClient({
-        endpoint: process.env.ENDPOINT_DYNAMODB?.replace("172.17.0.2", "localhost"),
+        endpoint: process.env.ENDPOINT_DYNAMODB,
         region: process.env.REGION,
     })
 
