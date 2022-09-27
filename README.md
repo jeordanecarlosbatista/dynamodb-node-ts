@@ -49,6 +49,10 @@ docker run --rm -d -p 8000:8000 --network dynamodb-local --name dynamodb-local a
 ```
 
 ### Setup
+##### Download or clone this repository, then
+```
+cd dynamodb-node-ts
+```
 ##### Install dependencies
 ```
 npm install
@@ -62,7 +66,8 @@ npm run db:create-table
 ##### Load table with data fakes
 ```
 npm run db:load-table
-
+```
+```
 output:
 database loaded successfully 🚀
 ```
@@ -71,7 +76,8 @@ database loaded successfully 🚀
 ##### Run all test suites
 ```
 npm test
-
+```
+```
 output:
   tests on shopping cart database
     ✓ Should return list all customers (60 ms)
@@ -87,7 +93,6 @@ Snapshots:   0 total
 Time:        0.671 s, estimated 1 s
 Ran all test suites.
 ```
-
 
 ### DynamoDB CLI - Some Commands
 
