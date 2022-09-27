@@ -397,8 +397,7 @@ docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -
 ## References
  - <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html">What is Amazon DynamoDB?</a>
  - <a href="https://aws.amazon.com/pt/cli/">AWS CLI Command</a>
- - <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.html">Getting started with DynamoDB and AWS SDKs
-</a>
+ - <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.html">Getting started with DynamoDB and AWS SDKs</a>
  - <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html">AWS DynamoDB Document Client</a>
  - <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html">Setting up DynamoDB local (downloadable version)</a>
  - <a href="https://aws.amazon.com/getting-started/hands-on/create-nosql-table/?nc1=h_ls">Create and Query a NoSQL Table with Amazon DynamoDB</a>
