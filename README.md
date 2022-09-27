@@ -2,7 +2,7 @@
 
 This project is just for learning and test proposals. Do not use it in production.
 
-Testing DynamoDB maineset using Node.js with TypeScript via testing using Jest (test tool).
+Testing DynamoDB mindset using Node.js with TypeScript via testing using Jest (test tool).
 
 ## Context
 
@@ -99,7 +99,8 @@ Ran all test suites.
 ##### List tables
 ```
 docker run --rm -it --network dynamodb-local -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -e AWS_SECRET_ACCESS_KEY=local amazon/aws-cli dynamodb list-tables --endpoint-url http://dynamodb-local:8000
-
+```
+```
 output:
 {
     "TableNames": [
