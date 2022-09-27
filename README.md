@@ -39,12 +39,21 @@ The model built was to solve the following queries:
 ```
 docker pull amazon/dynamodb-local
 ```
+##### Create network for script execution
+```
+docker network create --driver=bridge dynamodb-local
+```
 ##### Start the local DynamoDB container
 ```
-docker run --rm -d -p 8000:8000 --name dynamodb-local amazon/dynamodb-local
+docker run --rm -d -p 8000:8000 --network dynamodb-local --name dynamodb-local amazon/dynamodb-local
 ```
 
 ### Setup
+##### Install dependencies
+```
+npm install
+```
+ 
 ##### Initialize table creation
 ```
 npm run db:create-table
@@ -99,7 +108,6 @@ docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -
 ```
 <details >
 <summary style="font-size:14px">View output</summary>
-```
 {
     "Items": [
         {
@@ -318,7 +326,7 @@ docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -
     "ScannedCount": 11,
     "ConsumedCapacity": null
 }
-```
+
 </details>
 
 ##### Returns information about the table, including the current status of the table, when it was created, the primary key schema, and any indexes on the table.
@@ -327,7 +335,7 @@ docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -
 ```
 <details >
 <summary style="font-size:14px">View output</summary>
-```
+
 {
     "Table": {
         "AttributeDefinitions": [
@@ -391,7 +399,7 @@ docker run --rm -it -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=local -
         ]
     }
 }
-```
+
 </details>
 
 ## References
